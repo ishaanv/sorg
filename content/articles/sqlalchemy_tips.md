@@ -36,7 +36,7 @@ Breakdown: Mixins reduce code redundancy. For example, whenever we require a `cr
 
 
 
-### Triggers
+## Triggers
 
 This feature is often overlooked, however, in my opinion, is very useful.
 
@@ -49,7 +49,11 @@ def on_insert_transaction(mapper, connection, target):
 
  
 
-3. Triggers + celery
+### Triggers + celery
+
+
+
+## Some other thing
 
 
 
