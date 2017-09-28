@@ -216,7 +216,7 @@ func TestTransformImagesToRetina(t *testing.T) {
 
 func TestTransformImagesToAbsoluteURLs(t *testing.T) {
 	assert.Equal(t,
-		`<img src="https://brandur.org/assets/hello.jpg">`,
+		`<img src="https://ishaan.xyz/assets/hello.jpg">`,
 		transformImagesToAbsoluteURLs(
 			`<img src="/assets/hello.jpg">`,
 			&RenderOptions{AbsoluteURLs: true},

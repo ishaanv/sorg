@@ -76,5 +76,5 @@ using these commands:
     dep ensure -add github.com/foo/bar
 
 [blackswan]: https://github.com/brandur/blackswan
-[brandur]: https://brandur.org
+[brandur]: https://ishaan.xyz
 [org]: https://github.com/brandur/org

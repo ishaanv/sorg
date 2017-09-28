@@ -3,7 +3,7 @@
     .index-about-and-lists
       h1
         a href="/about" About
-      p My name is Brandur Leach (<a href="https://twitter.com/brandur">@brandur</a>). I'm an engineer at Stripe, and am interested in service engineering, APIs, Vim, Tmux, Ruby, Go, terminal productivity, running, fixed gear riding, history, urban design, and metal.
+      p My name is Ishaan Varshney. I'm a software engineer and applied mathematician at BVN (<a href="https://bvn.com.au">BVN</a>). Discussions here pertain to distributed systems, Python, economics, seeing Australia on bicycle, machine learning and human learning.
       .divider-short
       h1
         a href="/articles" Articles
@@ -15,7 +15,7 @@
         {{end}}
       p.older
         em Older articles are <a href="/articles">available here</a>.
-      .divider-short
+    .index-photos-list
       h1
         a href="/fragments" Fragments
       ul
@@ -23,20 +23,11 @@
           li
             a href="/fragments/{{.Slug}}" {{.Title}}
             p
-              | {{HTML .Hook}} 
+              | {{HTML .Hook}}
               span.meta {{FormatTime .PublishedAt}}
         {{end}}
       p.older
         em Older fragments are <a href="/fragments">available here</a>.
-    .index-photos-list
-      h1
-        a href="/photos" Photos
-      ul
-        {{range $i, $photo := .Photos}}
-          li
-            a href="https://www.flickr.com/photos/brandurleach/{{$photo.Slug}}"
-              img src="/assets/photos/{{$photo.Slug}}.jpg" data-rjs="2" height="{{$photo.MediumImageHeight}}" width="{{$photo.MediumImageWidth}}"
-        {{end}}
   .top-nav#top-nav-index
     .nav-inner
       = include views/_nav

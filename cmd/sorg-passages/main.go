@@ -19,11 +19,11 @@ import (
 )
 
 const (
-	mailDomain         = "list.brandur.org"
+	mailDomain         = "list.ishaan.xyz"
 	fromAddress        = "Brandur <" + listAddress + ">"
 	listAddress        = "passages@" + mailDomain
 	listStagingAddress = "passages-staging@" + mailDomain
-	replyToAddress     = "brandur@brandur.org"
+	replyToAddress     = "brandur@ishaan.xyz"
 	testAddress        = replyToAddress
 )
 

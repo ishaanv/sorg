@@ -7,16 +7,6 @@ nav
     li
       a href="/fragments" Fragments
     li
-      a href="/photos" Photos
-    li
-      a href="/runs" Runs
-    li
-      a href="/talks" Talks
-    li
-      a href="/twitter" Twitter
-    li
       a href="/reading" Reading
-    li
-      a href="/now" Now
     li
       a href="/about" About

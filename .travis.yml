@@ -17,10 +17,10 @@ script:
 
   # deploy development version that includes drafts
   - TARGET_DIR=./public-dev DRAFTS=true make build
-  - TARGET_DIR=./public-dev S3_BUCKET=brandur.org-dev make deploy
+  - TARGET_DIR=./public-dev S3_BUCKET=ishaan.xyz-dev make deploy
 
   # then deploy production
-  - TARGET_DIR=./public S3_BUCKET=brandur.org make deploy
+  - TARGET_DIR=./public S3_BUCKET=ishaan.xyz make deploy
 
 notifications:
   email:

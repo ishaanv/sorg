@@ -14,7 +14,7 @@ import (
 const (
 	// AbsoluteURL is the site's absolute URL. It's usually preferable that
 	// it's not used, but it is when generating emails.
-	AbsoluteURL = "https://brandur.org"
+	AbsoluteURL = "https://ishaan.xyz"
 
 	// ContentDir is the location of the site's content (articles, fragments,
 	// assets, etc.).
@@ -47,7 +47,7 @@ var outputDirs = []string{
 	"assets/" + Release,
 	"assets/photos",
 	"fragments",
-	"photos",
+	// "photos",
 	"reading",
 	"runs",
 	"passages",

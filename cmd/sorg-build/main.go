@@ -88,7 +88,7 @@ type Article struct {
 func (a *Article) PublishingInfo() string {
 	return `<p><em><strong>` + a.Title + `</strong> was published on <strong>` +
 		a.PublishedAt.Format("January 2, 2006") + `</strong> from <strong>` +
-		a.Location + `</strong>.</em></p>` + twitterInfo
+		a.Location + `</strong>.</em></p>`
 }
 
 type articleByPublishedAt []*Article
@@ -107,10 +107,10 @@ type articleYear struct {
 // environment variables.
 type Conf struct {
 	// AtomAuthorName is the name of the author to include in Atom feeds.
-	AtomAuthorName string `env:"AUTHOR_NAME,default=Brandur Leach"`
+	AtomAuthorName string `env:"AUTHOR_NAME,default=Ishaan Varshney"`
 
 	// AtomAuthorName is the URL of the author to include in Atom feeds.
-	AtomAuthorURL string `env:"AUTHOR_URL,default=https://brandur.org"`
+	AtomAuthorURL string `env:"AUTHOR_URL,default=https://ishaan.xyz"`
 
 	// BlackSwanDatabaseURL is a connection string for a database to connect to
 	// in order to extract books, tweets, runs, etc.
@@ -147,7 +147,7 @@ type Conf struct {
 	NumAtomEntries int `env:"NUM_ATOM_ENTRIES,default=20"`
 
 	// SiteURL is the absolute URL where the compiled site will be hosted.
-	SiteURL string `env:"SITE_URL,default=https://brandur.org"`
+	SiteURL string `env:"SITE_URL,default=https://ishaan.xyz"`
 
 	// TargetDir is the target location where the site will be built to.
 	TargetDir string `env:"TARGET_DIR,default=./public"`
@@ -195,8 +195,7 @@ type Fragment struct {
 // go into the left sidebar when a fragment is shown.
 func (f *Fragment) PublishingInfo() string {
 	return `<p><em><strong>` + f.Title + `</strong> was published on <strong>` +
-		f.PublishedAt.Format("January 2, 2006") + `</strong>.</em></p>` +
-		twitterInfo
+		f.PublishedAt.Format("January 2, 2006") + `</strong>.</em></p>`
 }
 
 type fragmentByPublishedAt []*Fragment
@@ -581,12 +580,12 @@ func compileArticlesFeed(articles []*Article) error {
 	}()
 
 	feed := &atom.Feed{
-		Title: "Articles - brandur.org",
-		ID:    "tag:brandur.org.org,2013:/articles",
+		Title: "Articles - ishaan.xyz",
+		ID:    "tag:ishaan.xyz.org,2013:/articles",
 
 		Links: []*atom.Link{
-			{Rel: "self", Type: "application/atom+xml", Href: "https://brandur.org/articles.atom"},
-			{Rel: "alternate", Type: "text/html", Href: "https://brandur.org"},
+			{Rel: "self", Type: "application/atom+xml", Href: "https://ishaan.xyz/articles.atom"},
+			{Rel: "alternate", Type: "text/html", Href: "https://ishaan.xyz"},
 		},
 	}
 
@@ -605,7 +604,7 @@ func compileArticlesFeed(articles []*Article) error {
 			Published: *article.PublishedAt,
 			Updated:   *article.PublishedAt,
 			Link:      &atom.Link{Href: conf.SiteURL + "/" + article.Slug},
-			ID:        "tag:brandur.org," + article.PublishedAt.Format("2006-01-02") + ":" + article.Slug,
+			ID:        "tag:ishaan.xyz," + article.PublishedAt.Format("2006-01-02") + ":" + article.Slug,
 
 			AuthorName: conf.AtomAuthorName,
 			AuthorURI:  conf.AtomAuthorURL,
@@ -696,12 +695,12 @@ func compileFragmentsFeed(fragments []*Fragment) error {
 	}()
 
 	feed := &atom.Feed{
-		Title: "Fragments - brandur.org",
-		ID:    "tag:brandur.org.org,2013:/fragments",
+		Title: "Fragments - ishaan.xyz",
+		ID:    "tag:ishaan.xyz.org,2013:/fragments",
 
 		Links: []*atom.Link{
-			{Rel: "self", Type: "application/atom+xml", Href: "https://brandur.org/fragments.atom"},
-			{Rel: "alternate", Type: "text/html", Href: "https://brandur.org"},
+			{Rel: "self", Type: "application/atom+xml", Href: "https://ishaan.xyz/fragments.atom"},
+			{Rel: "alternate", Type: "text/html", Href: "https://ishaan.xyz"},
 		},
 	}
 
@@ -720,7 +719,7 @@ func compileFragmentsFeed(fragments []*Fragment) error {
 			Published: *fragment.PublishedAt,
 			Updated:   *fragment.PublishedAt,
 			Link:      &atom.Link{Href: conf.SiteURL + "/fragments/" + fragment.Slug},
-			ID:        "tag:brandur.org," + fragment.PublishedAt.Format("2006-01-02") + ":fragments/" + fragment.Slug,
+			ID:        "tag:ishaan.xyz," + fragment.PublishedAt.Format("2006-01-02") + ":fragments/" + fragment.Slug,
 
 			AuthorName: conf.AtomAuthorName,
 			AuthorURI:  conf.AtomAuthorURL,
@@ -776,7 +775,7 @@ func compileHome(articles []*Article, fragments []*Fragment, photos []*Photo) er
 		photos = photos[0:9]
 	}
 
-	locals := getLocals("brandur.org", map[string]interface{}{
+	locals := getLocals("ishaan.xyz", map[string]interface{}{
 		"Articles":      articles,
 		"Fragments":     fragments,
 		"Photos":        photos,
@@ -883,7 +882,7 @@ func compilePhotos(db *sql.DB) ([]*Photo, error) {
 	//
 	// These can be synced from the built bucket with:
 	//
-	//     aws s3 sync s3://brandur.org/assets/photos/ content/photos/
+	//     aws s3 sync s3://ishaan.xyz/assets/photos/ content/photos/
 	//
 	cacheDir := path.Join(sorg.ContentDir, "photos")
 

@@ -2,14 +2,14 @@
 
 html lang="en"
   head
-    title {{.Title}} &mdash; Brandur Leach
+    title {{.Title}} &mdash; Ishaan Varshney
 
     meta content="text/html; charset=utf-8" http-equiv="Content-Type"
 
     meta name="viewport" content="width={{.ViewportWidth}}"
 
-    link href="/articles.atom" rel="alternate" title="Articles - brandur.org" type="application/atom+xml"
-    link href="/fragments.atom" rel="alternate" title="Fragments - brandur.org" type="application/atom+xml"
+    link href="/articles.atom" rel="alternate" title="Articles - ishaan.xyz" type="application/atom+xml"
+    link href="/fragments.atom" rel="alternate" title="Fragments - ishaan.xyz" type="application/atom+xml"
 
     link href="/assets/{{.Release}}/app.css" media="screen" rel="stylesheet" type="text/css"
     script src="/assets/{{.Release}}/app.js" type="text/javascript"
@@ -20,3 +20,8 @@ html lang="en"
     = include views/_analytics .
     #container
       = yield main
+    div class="divider-short"
+      div class="info"
+        p This site design is part of of <a href="https://github.com/brandur/sorg" rel="nofollow">Sorg</a> designed by <a href="https://github.com/brandur" rel="nofollow">Brandur Leach</a>. Check out his blog at <a href="https://brandur.org/" rel="nofollow">brandur.org</a>.
+
+
