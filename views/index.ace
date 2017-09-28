@@ -3,7 +3,7 @@
     .index-about-and-lists
       h1
         a href="/about" About
-      p My name is Ishaan Varshney. I'm a software engineer and applied mathematician at BVN (<a href="https://bvn.com.au">BVN</a>). Discussions here pertain to distributed systems, Python, economics, seeing Australia on bicycle, machine learning and human learning.
+      p My name is Ishaan Varshney. I'm a software engineer and applied mathematician at <a href="https://bvn.com.au">BVN</a>. Discussions here pertain to distributed systems, Python, economics, seeing Australia on bicycle, machine learning and human learning.
       .divider-short
       h1
         a href="/articles" Articles
