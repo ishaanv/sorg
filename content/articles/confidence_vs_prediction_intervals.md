@@ -1,11 +1,10 @@
 ---
-hook: A visual look at how the two differ using MatplotLib.
+hook: A visual look at how the two differ using Matplotlib.
 location: Sydney
 published_at: 2017-01-20T15:25:07Z
 title: Confidence Intervals vs Prediction Intervals
 ---
 
-# Context
 
 Statistics is useful because it helps us predict phenonemen. However, whenever we enter the field of predictions we also need to provide a level of uncertainty (or confidence) associated with that estimate.
 
@@ -13,7 +12,7 @@ Let's explore the idea of uncertainty with an example.
 
 ## TV advertising increases sales?
 
-*This example has been lifted from the book [Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)*
+*This example has been lifted from the book [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)*
 
 ### Data
 
