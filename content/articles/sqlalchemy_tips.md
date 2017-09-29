@@ -5,10 +5,11 @@ published_at: 2017-08-25T15:25:07Z
 title: Three SQLAlchemy Tips
 ---
 
-I've been using SQLAlchemy (SQLA) for about a year so I'd thought I'd share
+I've been using [SQLAlchemy](https://www.sqlalchemy.org/) (SQLA) for about a year so I'd thought I'd share
 three neat ways I've discovered it being used.
 
-## Created at, updated at columns
+
+## Easy created_at, updated_at column
 
 ``` python
 class TimestampMixin(object):
@@ -49,11 +50,9 @@ def on_insert_transaction(mapper, connection, target):
 
  
 
-### Triggers + celery
+## Triggers + celery
 
 
-
-## Some other thing
 
 
 
